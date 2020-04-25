@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>network</key>
+    <dict>
+        <key>host</key>
+        <string>localhost</string>
+        <key>port</key>
+        <string>8888</string>
+        <key>baseRestPath</key>
+        <string>services/UnifiedAgentController/UACAPI/users/mikeSupervisorWalsh/</string>
+        <key>webSocketPath</key>
+        <string>services/Broadcast-UnifiedAgentController/broadcast?X-Atmosphere-tracking-id=0</string>
+    </dict>
+</dict>
+</plist>
+

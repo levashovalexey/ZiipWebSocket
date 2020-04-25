@@ -6,6 +6,10 @@ target 'ZiipWebSocket' do
   use_frameworks!
 
   # Pods for ZiipWebSocket
+    pod 'Swinject'
+    pod 'SwinjectStoryboard'
+    pod 'SwiftyJSON'
+    pod 'SwiftyBeaver'
   
 
   target 'ZiipWebSocketTests' do

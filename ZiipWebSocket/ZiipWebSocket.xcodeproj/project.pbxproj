@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2912F19FB46B65185ABFD565 /* Pods_ZiipWebSocket_ZiipWebSocketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08777B496AC6CDFF82AC3569 /* Pods_ZiipWebSocket_ZiipWebSocketUITests.framework */; };
+		611B42159874678633BAB134 /* Pods_ZiipWebSocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70913BDAA49673DF5C9CA33 /* Pods_ZiipWebSocketTests.framework */; };
 		9047E86A2453961F00A91627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8692453961F00A91627 /* AppDelegate.swift */; };
 		9047E86C2453961F00A91627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E86B2453961F00A91627 /* SceneDelegate.swift */; };
-		9047E86E2453961F00A91627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E86D2453961F00A91627 /* ViewController.swift */; };
+		9047E86E2453961F00A91627 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E86D2453961F00A91627 /* MainViewController.swift */; };
 		9047E8712453961F00A91627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9047E86F2453961F00A91627 /* Main.storyboard */; };
 		9047E8732453962100A91627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9047E8722453962100A91627 /* Assets.xcassets */; };
 		9047E8762453962100A91627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9047E8742453962100A91627 /* LaunchScreen.storyboard */; };
@@ -18,6 +20,17 @@
 		9047E89F245396FA00A91627 /* WebSocketServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E89C245396FA00A91627 /* WebSocketServiceProtocol.swift */; };
 		9047E8A0245396FA00A91627 /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E89E245396FA00A91627 /* WebSocketService.swift */; };
 		9047E8A4245397B000A91627 /* KeepAliveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A3245397B000A91627 /* KeepAliveService.swift */; };
+		9047E8A62454D50200A91627 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A52454D50200A91627 /* Routes.swift */; };
+		9047E8A82454D52900A91627 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A72454D52900A91627 /* RestAPI.swift */; };
+		9047E8AB2454D63600A91627 /* ParticipantAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8AA2454D63600A91627 /* ParticipantAPI.swift */; };
+		9047E8AE2454D6B400A91627 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8AD2454D6B400A91627 /* Participant.swift */; };
+		9047E8B02454D7C400A91627 /* NewParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8AF2454D7C400A91627 /* NewParticipant.swift */; };
+		9047E8B22454D8D800A91627 /* Codable+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8B12454D8D800A91627 /* Codable+Safe.swift */; };
+		9047E8B42454DA3E00A91627 /* Config-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9047E8B32454DA3E00A91627 /* Config-Debug.plist */; };
+		9047E8B62454DA8400A91627 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8B52454DA8400A91627 /* ConfigService.swift */; };
+		9047E8BA2454DB1000A91627 /* ServiceRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8B92454DB1000A91627 /* ServiceRegister.swift */; };
+		9047E8BC2454DC4A00A91627 /* UIRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8BB2454DC4A00A91627 /* UIRegister.swift */; };
+		9368F94B9F5185767A77FD31 /* Pods_ZiipWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF126FDD15829B2D449B1566 /* Pods_ZiipWebSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08777B496AC6CDFF82AC3569 /* Pods_ZiipWebSocket_ZiipWebSocketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZiipWebSocket_ZiipWebSocketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		267B421F6690666E2115CDCA /* Pods-ZiipWebSocket-ZiipWebSocketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocket-ZiipWebSocketUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocket-ZiipWebSocketUITests/Pods-ZiipWebSocket-ZiipWebSocketUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		44987322E24D0D748860932C /* Pods-ZiipWebSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocket.debug.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocket/Pods-ZiipWebSocket.debug.xcconfig"; sourceTree = "<group>"; };
+		88CC7BA584CC7AAA68DD0C67 /* Pods-ZiipWebSocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocketTests.release.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocketTests/Pods-ZiipWebSocketTests.release.xcconfig"; sourceTree = "<group>"; };
 		9047E8662453961F00A91627 /* ZiipWebSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZiipWebSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9047E8692453961F00A91627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9047E86B2453961F00A91627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9047E86D2453961F00A91627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9047E86D2453961F00A91627 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9047E8702453961F00A91627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9047E8722453962100A91627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9047E8752453962100A91627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +72,21 @@
 		9047E89C245396FA00A91627 /* WebSocketServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketServiceProtocol.swift; sourceTree = "<group>"; };
 		9047E89E245396FA00A91627 /* WebSocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
 		9047E8A3245397B000A91627 /* KeepAliveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAliveService.swift; sourceTree = "<group>"; };
+		9047E8A52454D50200A91627 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		9047E8A72454D52900A91627 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
+		9047E8AA2454D63600A91627 /* ParticipantAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantAPI.swift; sourceTree = "<group>"; };
+		9047E8AD2454D6B400A91627 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		9047E8AF2454D7C400A91627 /* NewParticipant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewParticipant.swift; sourceTree = "<group>"; };
+		9047E8B12454D8D800A91627 /* Codable+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Safe.swift"; sourceTree = "<group>"; };
+		9047E8B32454DA3E00A91627 /* Config-Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Config-Debug.plist"; sourceTree = "<group>"; };
+		9047E8B52454DA8400A91627 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		9047E8B92454DB1000A91627 /* ServiceRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegister.swift; sourceTree = "<group>"; };
+		9047E8BB2454DC4A00A91627 /* UIRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRegister.swift; sourceTree = "<group>"; };
+		A75FB6316EB3CDD028827F06 /* Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocket-ZiipWebSocketUITests/Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ABED1340E8F5422DEB77B930 /* Pods-ZiipWebSocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocketTests.debug.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocketTests/Pods-ZiipWebSocketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF126FDD15829B2D449B1566 /* Pods_ZiipWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZiipWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70913BDAA49673DF5C9CA33 /* Pods_ZiipWebSocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZiipWebSocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFD931121C278905F1A5432B /* Pods-ZiipWebSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocket.release.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocket/Pods-ZiipWebSocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9368F94B9F5185767A77FD31 /* Pods_ZiipWebSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611B42159874678633BAB134 /* Pods_ZiipWebSocketTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +110,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2912F19FB46B65185ABFD565 /* Pods_ZiipWebSocket_ZiipWebSocketUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		689AF4208D0842F9513D829A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44987322E24D0D748860932C /* Pods-ZiipWebSocket.debug.xcconfig */,
+				FFD931121C278905F1A5432B /* Pods-ZiipWebSocket.release.xcconfig */,
+				267B421F6690666E2115CDCA /* Pods-ZiipWebSocket-ZiipWebSocketUITests.debug.xcconfig */,
+				A75FB6316EB3CDD028827F06 /* Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig */,
+				ABED1340E8F5422DEB77B930 /* Pods-ZiipWebSocketTests.debug.xcconfig */,
+				88CC7BA584CC7AAA68DD0C67 /* Pods-ZiipWebSocketTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84251D04C54384A026E9DDE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF126FDD15829B2D449B1566 /* Pods_ZiipWebSocket.framework */,
+				08777B496AC6CDFF82AC3569 /* Pods_ZiipWebSocket_ZiipWebSocketUITests.framework */,
+				E70913BDAA49673DF5C9CA33 /* Pods_ZiipWebSocketTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9047E85D2453961F00A91627 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +147,8 @@
 				9047E87F2453962100A91627 /* ZiipWebSocketTests */,
 				9047E88A2453962100A91627 /* ZiipWebSocketUITests */,
 				9047E8672453961F00A91627 /* Products */,
+				689AF4208D0842F9513D829A /* Pods */,
+				84251D04C54384A026E9DDE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,16 +165,19 @@
 		9047E8682453961F00A91627 /* ZiipWebSocket */ = {
 			isa = PBXGroup;
 			children = (
+				9047E8B82454DAEF00A91627 /* Assembly */,
+				9047E8B72454DA8A00A91627 /* Config */,
 				9047E8A22453971F00A91627 /* KeepAlive */,
-				9047E8A12453970B00A91627 /* REST */,
+				9047E8A12453970B00A91627 /* Network */,
 				9047E89A245396FA00A91627 /* WebSocket */,
 				9047E8692453961F00A91627 /* AppDelegate.swift */,
 				9047E86B2453961F00A91627 /* SceneDelegate.swift */,
-				9047E86D2453961F00A91627 /* ViewController.swift */,
+				9047E86D2453961F00A91627 /* MainViewController.swift */,
 				9047E86F2453961F00A91627 /* Main.storyboard */,
 				9047E8722453962100A91627 /* Assets.xcassets */,
 				9047E8742453962100A91627 /* LaunchScreen.storyboard */,
 				9047E8772453962100A91627 /* Info.plist */,
+				9047E8B32454DA3E00A91627 /* Config-Debug.plist */,
 			);
 			path = ZiipWebSocket;
 			sourceTree = "<group>";
@@ -162,11 +225,16 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		9047E8A12453970B00A91627 /* REST */ = {
+		9047E8A12453970B00A91627 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9047E8AC2454D68800A91627 /* Models */,
+				9047E8A92454D61B00A91627 /* Services */,
+				9047E8A52454D50200A91627 /* Routes.swift */,
+				9047E8A72454D52900A91627 /* RestAPI.swift */,
+				9047E8B12454D8D800A91627 /* Codable+Safe.swift */,
 			);
-			path = REST;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9047E8A22453971F00A91627 /* KeepAlive */ = {
@@ -177,6 +245,40 @@
 			path = KeepAlive;
 			sourceTree = "<group>";
 		};
+		9047E8A92454D61B00A91627 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8AA2454D63600A91627 /* ParticipantAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9047E8AC2454D68800A91627 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8AD2454D6B400A91627 /* Participant.swift */,
+				9047E8AF2454D7C400A91627 /* NewParticipant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9047E8B72454DA8A00A91627 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8B52454DA8400A91627 /* ConfigService.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9047E8B82454DAEF00A91627 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8B92454DB1000A91627 /* ServiceRegister.swift */,
+				9047E8BB2454DC4A00A91627 /* UIRegister.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9047E8902453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocket" */;
 			buildPhases = (
+				9C562208BF58531794D987A5 /* [CP] Check Pods Manifest.lock */,
 				9047E8622453961F00A91627 /* Sources */,
 				9047E8632453961F00A91627 /* Frameworks */,
 				9047E8642453961F00A91627 /* Resources */,
+				521375C70ED738110EBBBED4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9047E8932453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocketTests" */;
 			buildPhases = (
+				BB263694BFAAE2E9F22CEB4E /* [CP] Check Pods Manifest.lock */,
 				9047E8782453962100A91627 /* Sources */,
 				9047E8792453962100A91627 /* Frameworks */,
 				9047E87A2453962100A91627 /* Resources */,
@@ -219,9 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9047E8962453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocketUITests" */;
 			buildPhases = (
+				8E6124E201BECC7C403382FA /* [CP] Check Pods Manifest.lock */,
 				9047E8832453962100A91627 /* Sources */,
 				9047E8842453962100A91627 /* Frameworks */,
 				9047E8852453962100A91627 /* Resources */,
+				3C26B203D9E8E01CE96402B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +390,7 @@
 			files = (
 				9047E8762453962100A91627 /* LaunchScreen.storyboard in Resources */,
 				9047E8732453962100A91627 /* Assets.xcassets in Resources */,
+				9047E8B42454DA3E00A91627 /* Config-Debug.plist in Resources */,
 				9047E8712453961F00A91627 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,16 +411,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C26B203D9E8E01CE96402B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZiipWebSocket-ZiipWebSocketUITests/Pods-ZiipWebSocket-ZiipWebSocketUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZiipWebSocket-ZiipWebSocketUITests/Pods-ZiipWebSocket-ZiipWebSocketUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZiipWebSocket-ZiipWebSocketUITests/Pods-ZiipWebSocket-ZiipWebSocketUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		521375C70ED738110EBBBED4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZiipWebSocket/Pods-ZiipWebSocket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZiipWebSocket/Pods-ZiipWebSocket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZiipWebSocket/Pods-ZiipWebSocket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E6124E201BECC7C403382FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZiipWebSocket-ZiipWebSocketUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C562208BF58531794D987A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZiipWebSocket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB263694BFAAE2E9F22CEB4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZiipWebSocketTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9047E8622453961F00A91627 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9047E8A82454D52900A91627 /* RestAPI.swift in Sources */,
+				9047E8B22454D8D800A91627 /* Codable+Safe.swift in Sources */,
 				9047E8A0245396FA00A91627 /* WebSocketService.swift in Sources */,
-				9047E86E2453961F00A91627 /* ViewController.swift in Sources */,
+				9047E8A62454D50200A91627 /* Routes.swift in Sources */,
+				9047E86E2453961F00A91627 /* MainViewController.swift in Sources */,
+				9047E8B02454D7C400A91627 /* NewParticipant.swift in Sources */,
+				9047E8BA2454DB1000A91627 /* ServiceRegister.swift in Sources */,
+				9047E8B62454DA8400A91627 /* ConfigService.swift in Sources */,
 				9047E8A4245397B000A91627 /* KeepAliveService.swift in Sources */,
 				9047E86A2453961F00A91627 /* AppDelegate.swift in Sources */,
 				9047E86C2453961F00A91627 /* SceneDelegate.swift in Sources */,
+				9047E8AE2454D6B400A91627 /* Participant.swift in Sources */,
+				9047E8BC2454DC4A00A91627 /* UIRegister.swift in Sources */,
+				9047E8AB2454D63600A91627 /* ParticipantAPI.swift in Sources */,
 				9047E89F245396FA00A91627 /* WebSocketServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +704,7 @@
 		};
 		9047E8912453962100A91627 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44987322E24D0D748860932C /* Pods-ZiipWebSocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +723,7 @@
 		};
 		9047E8922453962100A91627 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD931121C278905F1A5432B /* Pods-ZiipWebSocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +742,7 @@
 		};
 		9047E8942453962100A91627 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABED1340E8F5422DEB77B930 /* Pods-ZiipWebSocketTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -542,6 +765,7 @@
 		};
 		9047E8952453962100A91627 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88CC7BA584CC7AAA68DD0C67 /* Pods-ZiipWebSocketTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +788,7 @@
 		};
 		9047E8972453962100A91627 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 267B421F6690666E2115CDCA /* Pods-ZiipWebSocket-ZiipWebSocketUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -584,6 +809,7 @@
 		};
 		9047E8982453962100A91627 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A75FB6316EB3CDD028827F06 /* Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -8,16 +8,42 @@
 
 import UIKit
 
+import Swinject
+import SwinjectStoryboard
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    var dependencyContainer: Container = {
+        let container = Swinject.Container()
+        // Dependency registration
+        ServiceRegister.register(for: container)
+        UIRegister.register(for: container)
+        return container
+    }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if let logger = dependencyContainer.resolve(Logger.self) {
+
+        }
+
+        Logger.info("========================== ZIIPROOM ========================")
+        Logger.info("================ iOS App \(AppInfo.version) ================")
+
+        guard let configurationService = dependencyContainer.resolve(ConfigurationService.self) else {
+            fatalError("ConfigurationService error!")
+        }
+
+        let mainStoryboard = SwinjectStoryboard.create(name: "Main", bundle: nil, container: dependencyContainer)
+        if let mainViewController = mainStoryboard.instantiateInitialViewController() {
+            self.window?.rootViewController = mainViewController
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
