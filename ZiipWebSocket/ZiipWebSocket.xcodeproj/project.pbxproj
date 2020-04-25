@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9047E86A2453961F00A91627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8692453961F00A91627 /* AppDelegate.swift */; };
+		9047E86C2453961F00A91627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E86B2453961F00A91627 /* SceneDelegate.swift */; };
+		9047E86E2453961F00A91627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E86D2453961F00A91627 /* ViewController.swift */; };
+		9047E8712453961F00A91627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9047E86F2453961F00A91627 /* Main.storyboard */; };
+		9047E8732453962100A91627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9047E8722453962100A91627 /* Assets.xcassets */; };
+		9047E8762453962100A91627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9047E8742453962100A91627 /* LaunchScreen.storyboard */; };
+		9047E8812453962100A91627 /* ZiipWebSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8802453962100A91627 /* ZiipWebSocketTests.swift */; };
+		9047E88C2453962100A91627 /* ZiipWebSocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E88B2453962100A91627 /* ZiipWebSocketUITests.swift */; };
+		9047E89F245396FA00A91627 /* WebSocketServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E89C245396FA00A91627 /* WebSocketServiceProtocol.swift */; };
+		9047E8A0245396FA00A91627 /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E89E245396FA00A91627 /* WebSocketService.swift */; };
+		9047E8A4245397B000A91627 /* KeepAliveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A3245397B000A91627 /* KeepAliveService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9047E87D2453962100A91627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9047E85E2453961F00A91627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9047E8652453961F00A91627;
+			remoteInfo = ZiipWebSocket;
+		};
+		9047E8882453962100A91627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9047E85E2453961F00A91627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9047E8652453961F00A91627;
+			remoteInfo = ZiipWebSocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9047E8662453961F00A91627 /* ZiipWebSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZiipWebSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9047E8692453961F00A91627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9047E86B2453961F00A91627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9047E86D2453961F00A91627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9047E8702453961F00A91627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9047E8722453962100A91627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9047E8752453962100A91627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9047E8772453962100A91627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9047E87C2453962100A91627 /* ZiipWebSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiipWebSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9047E8802453962100A91627 /* ZiipWebSocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiipWebSocketTests.swift; sourceTree = "<group>"; };
+		9047E8822453962100A91627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9047E8872453962100A91627 /* ZiipWebSocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiipWebSocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9047E88B2453962100A91627 /* ZiipWebSocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZiipWebSocketUITests.swift; sourceTree = "<group>"; };
+		9047E88D2453962100A91627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9047E89C245396FA00A91627 /* WebSocketServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketServiceProtocol.swift; sourceTree = "<group>"; };
+		9047E89E245396FA00A91627 /* WebSocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
+		9047E8A3245397B000A91627 /* KeepAliveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAliveService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9047E8632453961F00A91627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9047E8792453962100A91627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9047E8842453962100A91627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9047E85D2453961F00A91627 = {
+			isa = PBXGroup;
+			children = (
+				9047E8682453961F00A91627 /* ZiipWebSocket */,
+				9047E87F2453962100A91627 /* ZiipWebSocketTests */,
+				9047E88A2453962100A91627 /* ZiipWebSocketUITests */,
+				9047E8672453961F00A91627 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9047E8672453961F00A91627 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8662453961F00A91627 /* ZiipWebSocket.app */,
+				9047E87C2453962100A91627 /* ZiipWebSocketTests.xctest */,
+				9047E8872453962100A91627 /* ZiipWebSocketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9047E8682453961F00A91627 /* ZiipWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8A22453971F00A91627 /* KeepAlive */,
+				9047E8A12453970B00A91627 /* REST */,
+				9047E89A245396FA00A91627 /* WebSocket */,
+				9047E8692453961F00A91627 /* AppDelegate.swift */,
+				9047E86B2453961F00A91627 /* SceneDelegate.swift */,
+				9047E86D2453961F00A91627 /* ViewController.swift */,
+				9047E86F2453961F00A91627 /* Main.storyboard */,
+				9047E8722453962100A91627 /* Assets.xcassets */,
+				9047E8742453962100A91627 /* LaunchScreen.storyboard */,
+				9047E8772453962100A91627 /* Info.plist */,
+			);
+			path = ZiipWebSocket;
+			sourceTree = "<group>";
+		};
+		9047E87F2453962100A91627 /* ZiipWebSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8802453962100A91627 /* ZiipWebSocketTests.swift */,
+				9047E8822453962100A91627 /* Info.plist */,
+			);
+			path = ZiipWebSocketTests;
+			sourceTree = "<group>";
+		};
+		9047E88A2453962100A91627 /* ZiipWebSocketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9047E88B2453962100A91627 /* ZiipWebSocketUITests.swift */,
+				9047E88D2453962100A91627 /* Info.plist */,
+			);
+			path = ZiipWebSocketUITests;
+			sourceTree = "<group>";
+		};
+		9047E89A245396FA00A91627 /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				9047E89B245396FA00A91627 /* Protocol */,
+				9047E89D245396FA00A91627 /* Service */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		9047E89B245396FA00A91627 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9047E89C245396FA00A91627 /* WebSocketServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9047E89D245396FA00A91627 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9047E89E245396FA00A91627 /* WebSocketService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9047E8A12453970B00A91627 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		9047E8A22453971F00A91627 /* KeepAlive */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8A3245397B000A91627 /* KeepAliveService.swift */,
+			);
+			path = KeepAlive;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9047E8652453961F00A91627 /* ZiipWebSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9047E8902453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocket" */;
+			buildPhases = (
+				9047E8622453961F00A91627 /* Sources */,
+				9047E8632453961F00A91627 /* Frameworks */,
+				9047E8642453961F00A91627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZiipWebSocket;
+			productName = ZiipWebSocket;
+			productReference = 9047E8662453961F00A91627 /* ZiipWebSocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9047E87B2453962100A91627 /* ZiipWebSocketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9047E8932453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocketTests" */;
+			buildPhases = (
+				9047E8782453962100A91627 /* Sources */,
+				9047E8792453962100A91627 /* Frameworks */,
+				9047E87A2453962100A91627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9047E87E2453962100A91627 /* PBXTargetDependency */,
+			);
+			name = ZiipWebSocketTests;
+			productName = ZiipWebSocketTests;
+			productReference = 9047E87C2453962100A91627 /* ZiipWebSocketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9047E8862453962100A91627 /* ZiipWebSocketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9047E8962453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocketUITests" */;
+			buildPhases = (
+				9047E8832453962100A91627 /* Sources */,
+				9047E8842453962100A91627 /* Frameworks */,
+				9047E8852453962100A91627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9047E8892453962100A91627 /* PBXTargetDependency */,
+			);
+			name = ZiipWebSocketUITests;
+			productName = ZiipWebSocketUITests;
+			productReference = 9047E8872453962100A91627 /* ZiipWebSocketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9047E85E2453961F00A91627 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Underside;
+				TargetAttributes = {
+					9047E8652453961F00A91627 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					9047E87B2453962100A91627 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 9047E8652453961F00A91627;
+					};
+					9047E8862453962100A91627 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 9047E8652453961F00A91627;
+					};
+				};
+			};
+			buildConfigurationList = 9047E8612453961F00A91627 /* Build configuration list for PBXProject "ZiipWebSocket" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9047E85D2453961F00A91627;
+			productRefGroup = 9047E8672453961F00A91627 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9047E8652453961F00A91627 /* ZiipWebSocket */,
+				9047E87B2453962100A91627 /* ZiipWebSocketTests */,
+				9047E8862453962100A91627 /* ZiipWebSocketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9047E8642453961F00A91627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9047E8762453962100A91627 /* LaunchScreen.storyboard in Resources */,
+				9047E8732453962100A91627 /* Assets.xcassets in Resources */,
+				9047E8712453961F00A91627 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9047E87A2453962100A91627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9047E8852453962100A91627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9047E8622453961F00A91627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9047E8A0245396FA00A91627 /* WebSocketService.swift in Sources */,
+				9047E86E2453961F00A91627 /* ViewController.swift in Sources */,
+				9047E8A4245397B000A91627 /* KeepAliveService.swift in Sources */,
+				9047E86A2453961F00A91627 /* AppDelegate.swift in Sources */,
+				9047E86C2453961F00A91627 /* SceneDelegate.swift in Sources */,
+				9047E89F245396FA00A91627 /* WebSocketServiceProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9047E8782453962100A91627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9047E8812453962100A91627 /* ZiipWebSocketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9047E8832453962100A91627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9047E88C2453962100A91627 /* ZiipWebSocketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9047E87E2453962100A91627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9047E8652453961F00A91627 /* ZiipWebSocket */;
+			targetProxy = 9047E87D2453962100A91627 /* PBXContainerItemProxy */;
+		};
+		9047E8892453962100A91627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9047E8652453961F00A91627 /* ZiipWebSocket */;
+			targetProxy = 9047E8882453962100A91627 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9047E86F2453961F00A91627 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9047E8702453961F00A91627 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9047E8742453962100A91627 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9047E8752453962100A91627 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9047E88E2453962100A91627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9047E88F2453962100A91627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9047E8912453962100A91627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F52N69662H;
+				INFOPLIST_FILE = ZiipWebSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mera.ZiipWebSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9047E8922453962100A91627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F52N69662H;
+				INFOPLIST_FILE = ZiipWebSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mera.ZiipWebSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9047E8942453962100A91627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F52N69662H;
+				INFOPLIST_FILE = ZiipWebSocketTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mera.ZiipWebSocketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiipWebSocket.app/ZiipWebSocket";
+			};
+			name = Debug;
+		};
+		9047E8952453962100A91627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F52N69662H;
+				INFOPLIST_FILE = ZiipWebSocketTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mera.ZiipWebSocketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiipWebSocket.app/ZiipWebSocket";
+			};
+			name = Release;
+		};
+		9047E8972453962100A91627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F52N69662H;
+				INFOPLIST_FILE = ZiipWebSocketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mera.ZiipWebSocketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZiipWebSocket;
+			};
+			name = Debug;
+		};
+		9047E8982453962100A91627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F52N69662H;
+				INFOPLIST_FILE = ZiipWebSocketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mera.ZiipWebSocketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZiipWebSocket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9047E8612453961F00A91627 /* Build configuration list for PBXProject "ZiipWebSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9047E88E2453962100A91627 /* Debug */,
+				9047E88F2453962100A91627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9047E8902453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9047E8912453962100A91627 /* Debug */,
+				9047E8922453962100A91627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9047E8932453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9047E8942453962100A91627 /* Debug */,
+				9047E8952453962100A91627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9047E8962453962100A91627 /* Build configuration list for PBXNativeTarget "ZiipWebSocketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9047E8972453962100A91627 /* Debug */,
+				9047E8982453962100A91627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9047E85E2453961F00A91627 /* Project object */;
+}
