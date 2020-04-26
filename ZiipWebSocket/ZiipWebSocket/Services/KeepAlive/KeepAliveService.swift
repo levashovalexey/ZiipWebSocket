@@ -41,6 +41,7 @@ public class KeepAliveHubService: KeepAliveService {
     // MARK: - Dependencies
     
     public var webSocket: WebSocketServiceProtocol?
+    public var configurationService: NetworkConfigurable?
     
     // MARK: - Private properties
 
@@ -100,6 +101,10 @@ public class KeepAliveHubService: KeepAliveService {
         }
         timer?.invalidate()
         
+        guard let pollingInterval = configurationService?.pollingInterval else {
+            fatalError("Polling interval not provide")
+        }
+        
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: {_ in
             self.sendKeepAlive(with: participantId)
         })
@@ -126,53 +131,57 @@ public class KeepAliveHubService: KeepAliveService {
     }
 }
 
-extension KeepAliveHubService: WebSocketServiceDelegate {
-
-    public func webSocketDidDisconnect(socket: WebSocketService) {
-        self.analyticService?.send(AnalyticEvent(type: AnalyticEventType.disconnect))
-        Logger.debug("WebSocket did disconnect")
-        isConnectionSetup = false
-        var userInfo: [String: Any]?
-        if let lastError = lastError {
-            userInfo = [Notification.Name.KeepAliveScenarios.UserInfo.errorKey: lastError]
-        }
-        NotificationCenter.default.post(name: Notification.Name.KeepAliveScenarios.keepAliveDown,
-                                        object: nil,
-                                        userInfo: userInfo)
-        webSocket?.delegate = nil
-    }
+extension KeepAliveService: WebSocketDelegate {
     
-    public func didReceiveData(socket: WebSocketService, data: Data) {
-        if let message = try? JSONDecoder().decode(WebSoketMessage.self, from: data) {
-            responseTimeoutTimer = nil
-            switch message {
-            
-            case .error(let error):
-                Logger.warning(error)
-                let errorMessageReceived = createKeepAliveError(for: .errorMessageReceived)
-                disconnect(error: errorMessageReceived)
-                
-            default:
-                Logger.verbose("Unexpected message type is received: \(message)")
-            }
-        }
-    }
-    
-    public func didErrorOccured(socket: WebSocketService, error: NSError) {
-        Logger.error(error)
-        isConnectionSetup = false
-        disconnect(error: error)
-    }
-    
-    public func httpUpgrade(socket: WebSocketService, request: String) {
-        Logger.verbose("request = \(request)")
-    }
-    
-    public func httpUpgrade(socket: WebSocketService, response: String) {
-        Logger.verbose("response = \(response)")
-        isConnectionSetup = true
-    }
 }
+
+//extension KeepAliveHubService: WebSocketServiceDelegate {
+//
+//    public func webSocketDidDisconnect(socket: WebSocketService) {
+//        self.analyticService?.send(AnalyticEvent(type: AnalyticEventType.disconnect))
+//        Logger.debug("WebSocket did disconnect")
+//        isConnectionSetup = false
+//        var userInfo: [String: Any]?
+//        if let lastError = lastError {
+//            userInfo = [Notification.Name.KeepAliveScenarios.UserInfo.errorKey: lastError]
+//        }
+//        NotificationCenter.default.post(name: Notification.Name.KeepAliveScenarios.keepAliveDown,
+//                                        object: nil,
+//                                        userInfo: userInfo)
+//        webSocket?.delegate = nil
+//    }
+//    
+//    public func didReceiveData(socket: WebSocketService, data: Data) {
+//        if let message = try? JSONDecoder().decode(WebSoketMessage.self, from: data) {
+//            responseTimeoutTimer = nil
+//            switch message {
+//            
+//            case .error(let error):
+//                Logger.warning(error)
+//                let errorMessageReceived = createKeepAliveError(for: .errorMessageReceived)
+//                disconnect(error: errorMessageReceived)
+//                
+//            default:
+//                Logger.verbose("Unexpected message type is received: \(message)")
+//            }
+//        }
+//    }
+//    
+//    public func didErrorOccured(socket: WebSocketService, error: NSError) {
+//        Logger.error(error)
+//        isConnectionSetup = false
+//        disconnect(error: error)
+//    }
+//    
+//    public func httpUpgrade(socket: WebSocketService, request: String) {
+//        Logger.verbose("request = \(request)")
+//    }
+//    
+//    public func httpUpgrade(socket: WebSocketService, response: String) {
+//        Logger.verbose("response = \(response)")
+//        isConnectionSetup = true
+//    }
+//}
 
 // MARK: - Notifications
 

@@ -208,7 +208,7 @@ public class HubConnectionManager: ConnectionManager {
         guard let participantService = participantService else {
             fatalError("HubConnectionManager: participantService not provided")
         }
-        if case .connected = hubConnection.state, let hubId = hubConnection.hubId {
+        if case .connected = hubConnection.state {
             state = .connecting(.participant)
             participantService.registerParticipant(reconnectParticipant) { result in
                 self.participantRegistrationCompleted(result: result)

@@ -15,7 +15,7 @@ enum SocketAPIError: Error {
     case connectionTimeout
 }
 
-protocol WebSocketServiceProtocol {
+public protocol WebSocketServiceProtocol {
     func connect(url: URL)
     func connect(urlRequest: URLRequest)
     func disconnect()
@@ -24,7 +24,7 @@ protocol WebSocketServiceProtocol {
     var delegate: WebSocketDelegate? { get set }
 }
 
-protocol WebSocketDelegate: class {
+public protocol WebSocketDelegate: class {
     func didOpen(socket: WebSocketServiceProtocol)
     func didClose(socket: WebSocketServiceProtocol, code: Int, reason: String?)
     func didReceiveMessage(socket: WebSocketServiceProtocol, message: String)

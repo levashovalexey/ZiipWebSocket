@@ -20,6 +20,7 @@ public class ParticipantsServiceImpl: ParticipantsService {
     // MARK: - Injected Dependencies
 
     public var participantsAPI: ParticipantAPI?
+    public var preferencesService:PreferencesService?
 
     // MARK: - Initialization
 
@@ -49,7 +50,6 @@ public class ParticipantsServiceImpl: ParticipantsService {
             return
         }
         api.createParticipant(userName) { result in
-            Logger.verbose("Participant registration result: \(result.analyticsResult)")
             if case .success(let participant) = result {
                 self.currentParticipant = participant
             }

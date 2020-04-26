@@ -105,7 +105,6 @@ public class HubConnectivityServiceWithTunneling: HubConnectivityService {
         }
         connection.startConnecting(to: hubId)
         cloudHubInfoApi.getConfiguration(hubId: hubId) { configResult in
-            self.analyticService?.sendResult(status: configResult.analyticsResult, type: AnalyticEventType.getConfiguration)
             switch configResult {
             case .failure(let error):
                 connection.discoveryHubFailed(with: error)
@@ -187,7 +186,6 @@ public class HubConnectivityServiceWithTunneling: HubConnectivityService {
 
     private func connectToHubViaCloud(hubId: String, for connection: HubConnection, completion: HubConnectCompletion? = nil) {
         cloudHubInfoApi.getConfiguration(hubId: hubId) { configResult in
-            self.analyticService?.sendResult(status: configResult.analyticsResult, type: AnalyticEventType.connectViaCloud)
             switch configResult {
             case .failure(let error):
                 connection.connectFailed(.cloud, with: error)
