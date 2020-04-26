@@ -10,6 +10,7 @@ import Foundation
 import Network
 
 class WebSocketService: NSObject, WebSocketServiceProtocol {
+    
 
     // MARK: - Private Variables
 
@@ -35,6 +36,14 @@ class WebSocketService: NSObject, WebSocketServiceProtocol {
 
     public func sendMessage(message: String) {
         webSocketTask?.send(.string(message), completionHandler: { (error) in
+            if let error = error {
+                self.delegate?.didErrorOccured(socket: self, error: error)
+            }
+        })
+    }
+    
+    public func sendMessage(data: Data) {
+        webSocketTask?.send(.data(data), completionHandler: { (error) in
             if let error = error {
                 self.delegate?.didErrorOccured(socket: self, error: error)
             }

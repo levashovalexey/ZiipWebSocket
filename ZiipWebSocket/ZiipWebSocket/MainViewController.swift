@@ -10,11 +10,27 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    
+    // MARK: - Injected Dependencies
+
+    public var connectionManager: ConnectionManager?
+    
+    //MARK: - Outlets
+    
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var roomCodeTextField: UITextField!
+    @IBOutlet private weak var hubIdTextField: UITextField!
+    
+    @IBOutlet weak var connectButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func connectButtonDidTap(_ sender: Any) {
+        
+    }
+    
 }
 

@@ -27,6 +27,13 @@ class ServiceRegister {
             return Logger()
         }.inObjectScope(.container)
         
+        
+        // MARK: - Endpoint Provider
+        
+        container.register(EndpointProvider.self) { container in
+            return StaticEndpoint(with: container.resolve(ConfigurationService.self)!)
+        }.inObjectScope(.container)
+        
         // MARK: - Connection Manager
         
         container.register(ConnectionManager.self) { container in
@@ -78,7 +85,7 @@ class ServiceRegister {
         // MARK: - KeepAlive
         
         container.register(KeepAliveService.self) { container in
-            let service = KeepAliveHubService()
+            let service = KeepAliveHubService(endpointProvider: container.resolve(HubConnectivityService.self)!)
             service.webSocket = container.resolve(WebSocketServiceProtocol.self)
             service.configurationService = container.resolve(ConfigurationService.self)
             return service
@@ -86,7 +93,7 @@ class ServiceRegister {
 
         // MARK: - WebSocketService
 
-        container.register(WebSocketServiceProtocol.self) { _ in
+        container.register(WebSocketServiceProtocol.self) { container in
             return WebSocketService()
         }.inObjectScope(.container)
     }

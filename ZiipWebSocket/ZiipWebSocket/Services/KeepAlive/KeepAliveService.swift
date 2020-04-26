@@ -38,8 +38,11 @@ public enum KeepAliveServiceError {
 
 public class KeepAliveHubService: KeepAliveService {
 
+    
+    
     // MARK: - Dependencies
     
+    public var endpointProvider: EndpointProvider?
     public var webSocket: WebSocketServiceProtocol?
     public var configurationService: NetworkConfigurable?
     
@@ -64,15 +67,17 @@ public class KeepAliveHubService: KeepAliveService {
     }
     
     // MARK: - KeepAliveService
-
-    public init() {}
+    
+    public init(endpointProvider provider: EndpointProvider) {
+        endpointProvider = provider
+    }
     
     public func setupConnection() {
-        guard let webSocket = webSocket else {
-            fatalError("Web Socket Service is not given for KeepAlive.")
+        webSocket?.delegate = self
+        guard let path = endpointProvider?.webSocketEndpointBasePath, let url = URL(string: path) else {
+            return
         }
-        webSocket.delegate = self
-        webSocket.connect()
+        webSocket?.connect(url: url)
 
     }
     
@@ -105,7 +110,7 @@ public class KeepAliveHubService: KeepAliveService {
             fatalError("Polling interval not provide")
         }
         
-        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: {_ in
+        timer = Timer.scheduledTimer(withTimeInterval: pollingInterval, repeats: true, block: {_ in
             self.sendKeepAlive(with: participantId)
         })
         sendKeepAlive(with: participantId)
@@ -120,7 +125,7 @@ public class KeepAliveHubService: KeepAliveService {
         }
         let keepAlive = WebSoketMessage.keepAlive(participantId: participantId)
         if let data = try? JSONEncoder().encode(keepAlive) {
-            webSocket.sendMessage(data: data, as: .text)
+            webSocket.sendMessage(data: data)
         }
     }
 
@@ -131,7 +136,50 @@ public class KeepAliveHubService: KeepAliveService {
     }
 }
 
-extension KeepAliveService: WebSocketDelegate {
+extension KeepAliveHubService : WebSocketDelegate {
+    public func didOpen(socket: WebSocketServiceProtocol) {
+        
+    }
+    
+    public func didClose(socket: WebSocketServiceProtocol, code: Int, reason: String?) {
+        Logger.debug("WebSocket did disconnect")
+        isConnectionSetup = false
+        var userInfo: [String: Any]?
+        if let lastError = lastError {
+            userInfo = [Notification.Name.KeepAliveScenarios.UserInfo.errorKey: lastError]
+        }
+        NotificationCenter.default.post(name: Notification.Name.KeepAliveScenarios.keepAliveDown,
+                                        object: nil,
+                                        userInfo: userInfo)
+        webSocket?.delegate = nil
+    }
+    
+    public func didReceiveMessage(socket: WebSocketServiceProtocol, message: String) {
+        
+    }
+    
+    public func didReceiveData(socket: WebSocketServiceProtocol, data: Data) {
+        if let message = try? JSONDecoder().decode(WebSoketMessage.self, from: data) {
+            responseTimeoutTimer = nil
+            switch message {
+
+            case .error(let error):
+                Logger.warning(error)
+                let errorMessageReceived = createKeepAliveError(for: .errorMessageReceived)
+                disconnect(error: errorMessageReceived)
+
+            default:
+                Logger.verbose("Unexpected message type is received: \(message)")
+            }
+        }
+    }
+    
+    public func didErrorOccured(socket: WebSocketServiceProtocol, error: Error) {
+        Logger.error(error)
+        isConnectionSetup = false
+        disconnect(error: error)
+    }
+    
     
 }
 

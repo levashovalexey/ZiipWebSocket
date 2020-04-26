@@ -14,8 +14,7 @@ class UIRegister {
     class func register(for container: Container) {
 
         container.storyboardInitCompleted(MainViewController.self) { resolver, controller in
-            //controller.networkConfig = resolver.resolve(ConfigurationService.self)
-            //controller.ParticipantAPI = resolver.resolve(ParticipantAPI.self)
+            controller.connectionManager = resolver.resolve(ConnectionManager.self)
         }
         
     }

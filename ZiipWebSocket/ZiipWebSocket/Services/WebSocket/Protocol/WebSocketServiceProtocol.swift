@@ -16,9 +16,11 @@ enum SocketAPIError: Error {
 }
 
 public protocol WebSocketServiceProtocol {
+
     func connect(url: URL)
     func connect(urlRequest: URLRequest)
     func disconnect()
+    func sendMessage(data: Data)
     func sendMessage(message: String)
 
     var delegate: WebSocketDelegate? { get set }
@@ -31,8 +33,3 @@ public protocol WebSocketDelegate: class {
     func didReceiveData(socket: WebSocketServiceProtocol, data: Data)
     func didErrorOccured(socket: WebSocketServiceProtocol, error: Error)
 }
-
-
-// sourcery:begin: AutoMockable
-extension WebSocketServiceProtocol {}
-// sourcery:end
