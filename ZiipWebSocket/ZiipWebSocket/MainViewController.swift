@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     // MARK: - Injected Dependencies
 
     public var connectionManager: ConnectionManager?
+    public var preferencesService: PreferencesService?
     
     //MARK: - Outlets
     
@@ -21,7 +22,7 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var roomCodeTextField: UITextField!
     @IBOutlet private weak var hubIdTextField: UITextField!
     
-    @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet private weak var connectButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

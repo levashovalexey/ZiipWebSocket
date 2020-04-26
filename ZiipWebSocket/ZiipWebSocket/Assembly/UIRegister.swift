@@ -15,6 +15,7 @@ class UIRegister {
 
         container.storyboardInitCompleted(MainViewController.self) { resolver, controller in
             controller.connectionManager = resolver.resolve(ConnectionManager.self)
+            controller.preferencesService = resolver.resolve(PreferencesService.self)
         }
         
     }
