@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (4.9.1)
+  - AlamofireNetworkActivityLogger (2.4.0):
+    - Alamofire (~> 4.8)
   - SwiftyBeaver (1.9.1)
   - SwiftyJSON (5.0.0)
   - Swinject (2.7.1)
@@ -6,6 +9,8 @@ PODS:
     - Swinject (~> 2.6)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - AlamofireNetworkActivityLogger (~> 2.0)
   - SwiftyBeaver
   - SwiftyJSON
   - Swinject
@@ -13,17 +18,21 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - AlamofireNetworkActivityLogger
     - SwiftyBeaver
     - SwiftyJSON
     - Swinject
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireNetworkActivityLogger: 6d3398c692d2c5d83b0c58793537860aca1e383d
   SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 6f43b9d60ed45f38b157c20a15430ed0862d633e
+PODFILE CHECKSUM: 63e623742157710663a85d3435f928a91b54f87f
 
 COCOAPODS: 1.9.1

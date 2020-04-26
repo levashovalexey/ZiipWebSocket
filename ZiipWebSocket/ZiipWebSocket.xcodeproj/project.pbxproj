@@ -20,7 +20,7 @@
 		9047E89F245396FA00A91627 /* WebSocketServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E89C245396FA00A91627 /* WebSocketServiceProtocol.swift */; };
 		9047E8A0245396FA00A91627 /* WebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E89E245396FA00A91627 /* WebSocketService.swift */; };
 		9047E8A4245397B000A91627 /* KeepAliveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A3245397B000A91627 /* KeepAliveService.swift */; };
-		9047E8A62454D50200A91627 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A52454D50200A91627 /* Routes.swift */; };
+		9047E8A62454D50200A91627 /* Routes+HubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A52454D50200A91627 /* Routes+HubAPI.swift */; };
 		9047E8A82454D52900A91627 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8A72454D52900A91627 /* RestAPI.swift */; };
 		9047E8AB2454D63600A91627 /* ParticipantAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8AA2454D63600A91627 /* ParticipantAPI.swift */; };
 		9047E8AE2454D6B400A91627 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8AD2454D6B400A91627 /* Participant.swift */; };
@@ -30,6 +30,19 @@
 		9047E8B62454DA8400A91627 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8B52454DA8400A91627 /* ConfigService.swift */; };
 		9047E8BA2454DB1000A91627 /* ServiceRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8B92454DB1000A91627 /* ServiceRegister.swift */; };
 		9047E8BC2454DC4A00A91627 /* UIRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8BB2454DC4A00A91627 /* UIRegister.swift */; };
+		9047E8BE2455879300A91627 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8BD2455879300A91627 /* NetworkAPI.swift */; };
+		9047E8C02455881400A91627 /* FailableDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8BF2455881400A91627 /* FailableDecodable.swift */; };
+		9047E8C42455892D00A91627 /* HubConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8C32455892D00A91627 /* HubConfiguration.swift */; };
+		9047E8C62455895100A91627 /* HubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8C52455895100A91627 /* HubAPI.swift */; };
+		9047E8C924558B0400A91627 /* HubConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8C824558B0400A91627 /* HubConnectivityService.swift */; };
+		9047E8CB24558BE900A91627 /* HubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8CA24558BE900A91627 /* HubConnection.swift */; };
+		9047E8CE2455C9BE00A91627 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8CD2455C9BE00A91627 /* ConnectionManager.swift */; };
+		9047E8D02455CB5E00A91627 /* WebSocketMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8CF2455CB5E00A91627 /* WebSocketMessage.swift */; };
+		9047E8D42455CCE800A91627 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8D32455CCE800A91627 /* Logger.swift */; };
+		9047E8D62455CD0500A91627 /* RotateFileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8D52455CD0500A91627 /* RotateFileDestination.swift */; };
+		9047E8D92455D1F800A91627 /* ParticipantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8D82455D1F800A91627 /* ParticipantsService.swift */; };
+		9047E8DB2455D41100A91627 /* HubInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8DA2455D41100A91627 /* HubInfoAPI.swift */; };
+		9047E8DD2455D44700A91627 /* Routes+CloudAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047E8DC2455D44700A91627 /* Routes+CloudAPI.swift */; };
 		9368F94B9F5185767A77FD31 /* Pods_ZiipWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF126FDD15829B2D449B1566 /* Pods_ZiipWebSocket.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +85,7 @@
 		9047E89C245396FA00A91627 /* WebSocketServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketServiceProtocol.swift; sourceTree = "<group>"; };
 		9047E89E245396FA00A91627 /* WebSocketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketService.swift; sourceTree = "<group>"; };
 		9047E8A3245397B000A91627 /* KeepAliveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAliveService.swift; sourceTree = "<group>"; };
-		9047E8A52454D50200A91627 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		9047E8A52454D50200A91627 /* Routes+HubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routes+HubAPI.swift"; sourceTree = "<group>"; };
 		9047E8A72454D52900A91627 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		9047E8AA2454D63600A91627 /* ParticipantAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantAPI.swift; sourceTree = "<group>"; };
 		9047E8AD2454D6B400A91627 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
@@ -82,6 +95,19 @@
 		9047E8B52454DA8400A91627 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		9047E8B92454DB1000A91627 /* ServiceRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRegister.swift; sourceTree = "<group>"; };
 		9047E8BB2454DC4A00A91627 /* UIRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRegister.swift; sourceTree = "<group>"; };
+		9047E8BD2455879300A91627 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		9047E8BF2455881400A91627 /* FailableDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDecodable.swift; sourceTree = "<group>"; };
+		9047E8C32455892D00A91627 /* HubConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubConfiguration.swift; sourceTree = "<group>"; };
+		9047E8C52455895100A91627 /* HubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubAPI.swift; sourceTree = "<group>"; };
+		9047E8C824558B0400A91627 /* HubConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubConnectivityService.swift; sourceTree = "<group>"; };
+		9047E8CA24558BE900A91627 /* HubConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubConnection.swift; sourceTree = "<group>"; };
+		9047E8CD2455C9BE00A91627 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		9047E8CF2455CB5E00A91627 /* WebSocketMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketMessage.swift; sourceTree = "<group>"; };
+		9047E8D32455CCE800A91627 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		9047E8D52455CD0500A91627 /* RotateFileDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateFileDestination.swift; sourceTree = "<group>"; };
+		9047E8D82455D1F800A91627 /* ParticipantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsService.swift; sourceTree = "<group>"; };
+		9047E8DA2455D41100A91627 /* HubInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubInfoAPI.swift; sourceTree = "<group>"; };
+		9047E8DC2455D44700A91627 /* Routes+CloudAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routes+CloudAPI.swift"; sourceTree = "<group>"; };
 		A75FB6316EB3CDD028827F06 /* Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocket-ZiipWebSocketUITests/Pods-ZiipWebSocket-ZiipWebSocketUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ABED1340E8F5422DEB77B930 /* Pods-ZiipWebSocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZiipWebSocketTests.debug.xcconfig"; path = "Target Support Files/Pods-ZiipWebSocketTests/Pods-ZiipWebSocketTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF126FDD15829B2D449B1566 /* Pods_ZiipWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZiipWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,9 +191,13 @@
 		9047E8682453961F00A91627 /* ZiipWebSocket */ = {
 			isa = PBXGroup;
 			children = (
+				9047E8D22455CCD700A91627 /* Logger */,
+				9047E8CC24558BFC00A91627 /* Managers */,
+				9047E8C724558AC300A91627 /* HubConnectivity */,
 				9047E8B82454DAEF00A91627 /* Assembly */,
 				9047E8B72454DA8A00A91627 /* Config */,
 				9047E8A22453971F00A91627 /* KeepAlive */,
+				9047E8D72455D1CF00A91627 /* Participant */,
 				9047E8A12453970B00A91627 /* Network */,
 				9047E89A245396FA00A91627 /* WebSocket */,
 				9047E8692453961F00A91627 /* AppDelegate.swift */,
@@ -203,6 +233,7 @@
 		9047E89A245396FA00A91627 /* WebSocket */ = {
 			isa = PBXGroup;
 			children = (
+				9047E8CF2455CB5E00A91627 /* WebSocketMessage.swift */,
 				9047E89B245396FA00A91627 /* Protocol */,
 				9047E89D245396FA00A91627 /* Service */,
 			);
@@ -230,9 +261,10 @@
 			children = (
 				9047E8AC2454D68800A91627 /* Models */,
 				9047E8A92454D61B00A91627 /* Services */,
-				9047E8A52454D50200A91627 /* Routes.swift */,
 				9047E8A72454D52900A91627 /* RestAPI.swift */,
 				9047E8B12454D8D800A91627 /* Codable+Safe.swift */,
+				9047E8BD2455879300A91627 /* NetworkAPI.swift */,
+				9047E8BF2455881400A91627 /* FailableDecodable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -248,7 +280,8 @@
 		9047E8A92454D61B00A91627 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9047E8AA2454D63600A91627 /* ParticipantAPI.swift */,
+				9047E8C22455889A00A91627 /* Hub */,
+				9047E8C12455888E00A91627 /* Cloud */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -258,6 +291,7 @@
 			children = (
 				9047E8AD2454D6B400A91627 /* Participant.swift */,
 				9047E8AF2454D7C400A91627 /* NewParticipant.swift */,
+				9047E8C32455892D00A91627 /* HubConfiguration.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +311,59 @@
 				9047E8BB2454DC4A00A91627 /* UIRegister.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		9047E8C12455888E00A91627 /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8DC2455D44700A91627 /* Routes+CloudAPI.swift */,
+				9047E8DA2455D41100A91627 /* HubInfoAPI.swift */,
+			);
+			path = Cloud;
+			sourceTree = "<group>";
+		};
+		9047E8C22455889A00A91627 /* Hub */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8A52454D50200A91627 /* Routes+HubAPI.swift */,
+				9047E8AA2454D63600A91627 /* ParticipantAPI.swift */,
+				9047E8C52455895100A91627 /* HubAPI.swift */,
+			);
+			path = Hub;
+			sourceTree = "<group>";
+		};
+		9047E8C724558AC300A91627 /* HubConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8C824558B0400A91627 /* HubConnectivityService.swift */,
+				9047E8CA24558BE900A91627 /* HubConnection.swift */,
+			);
+			path = HubConnectivity;
+			sourceTree = "<group>";
+		};
+		9047E8CC24558BFC00A91627 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8CD2455C9BE00A91627 /* ConnectionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9047E8D22455CCD700A91627 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8D32455CCE800A91627 /* Logger.swift */,
+				9047E8D52455CD0500A91627 /* RotateFileDestination.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		9047E8D72455D1CF00A91627 /* Participant */ = {
+			isa = PBXGroup;
+			children = (
+				9047E8D82455D1F800A91627 /* ParticipantsService.swift */,
+			);
+			path = Participant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,21 +606,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9047E8D62455CD0500A91627 /* RotateFileDestination.swift in Sources */,
 				9047E8A82454D52900A91627 /* RestAPI.swift in Sources */,
 				9047E8B22454D8D800A91627 /* Codable+Safe.swift in Sources */,
 				9047E8A0245396FA00A91627 /* WebSocketService.swift in Sources */,
-				9047E8A62454D50200A91627 /* Routes.swift in Sources */,
+				9047E8A62454D50200A91627 /* Routes+HubAPI.swift in Sources */,
+				9047E8C42455892D00A91627 /* HubConfiguration.swift in Sources */,
 				9047E86E2453961F00A91627 /* MainViewController.swift in Sources */,
 				9047E8B02454D7C400A91627 /* NewParticipant.swift in Sources */,
+				9047E8D42455CCE800A91627 /* Logger.swift in Sources */,
+				9047E8D92455D1F800A91627 /* ParticipantsService.swift in Sources */,
 				9047E8BA2454DB1000A91627 /* ServiceRegister.swift in Sources */,
 				9047E8B62454DA8400A91627 /* ConfigService.swift in Sources */,
+				9047E8CE2455C9BE00A91627 /* ConnectionManager.swift in Sources */,
 				9047E8A4245397B000A91627 /* KeepAliveService.swift in Sources */,
+				9047E8C924558B0400A91627 /* HubConnectivityService.swift in Sources */,
 				9047E86A2453961F00A91627 /* AppDelegate.swift in Sources */,
+				9047E8CB24558BE900A91627 /* HubConnection.swift in Sources */,
+				9047E8DB2455D41100A91627 /* HubInfoAPI.swift in Sources */,
+				9047E8D02455CB5E00A91627 /* WebSocketMessage.swift in Sources */,
 				9047E86C2453961F00A91627 /* SceneDelegate.swift in Sources */,
 				9047E8AE2454D6B400A91627 /* Participant.swift in Sources */,
 				9047E8BC2454DC4A00A91627 /* UIRegister.swift in Sources */,
+				9047E8DD2455D44700A91627 /* Routes+CloudAPI.swift in Sources */,
 				9047E8AB2454D63600A91627 /* ParticipantAPI.swift in Sources */,
+				9047E8C62455895100A91627 /* HubAPI.swift in Sources */,
 				9047E89F245396FA00A91627 /* WebSocketServiceProtocol.swift in Sources */,
+				9047E8C02455881400A91627 /* FailableDecodable.swift in Sources */,
+				9047E8BE2455879300A91627 /* NetworkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

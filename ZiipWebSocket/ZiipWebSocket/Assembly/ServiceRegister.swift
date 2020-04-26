@@ -40,6 +40,12 @@ class ServiceRegister {
 
 
         // MARK: - WebSocketService
+        
+        container.register(KeepAliveService.self) { container in
+            let service = KeepAliveHubService()
+            service.webSocket = container.resolve(WebSocketService.self)
+            return service
+        }
 
         container.register(WebSocketService.self) { _ in
             return WebSocketService()

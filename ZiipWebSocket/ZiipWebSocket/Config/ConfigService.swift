@@ -14,12 +14,9 @@ public enum PlistName: String {
 }
 
 public protocol NetworkConfigurable {
-    var host: String { get }
-    var port: String { get }
-    var baseRestPath: String { get }
-    var baseRestUrl: String { get }
-    var webSocketPath: String { get }
-    var webSocketUrl: String { get }
+    var basePath: String { get }
+    var pollingInterval: TimeInterval { get }
+    var connectionTimeout: TimeInterval { get }
 }
 
 public class ConfigurationService: NetworkConfigurable {
@@ -28,41 +25,26 @@ public class ConfigurationService: NetworkConfigurable {
 
         let network: NetworkConfig
 
-
         struct NetworkConfig: Decodable {
-            let host: String
-            let port: String
-            let baseRestPath: String
-            let webSocketPath: String
+            let basePath: String
+            let pollingInterval: Double
+            let connectionTimeout: Double
         }
 
     }
 
     // MARK: - NetworkConfigurable constants
-
-
-    public var host: String {
-        return config.network.host
+    
+    public var basePath: String {
+        return config.network.basePath
     }
-
-    public var port: String {
-        return config.network.port
+    
+    public var pollingInterval: TimeInterval {
+        return config.network.pollingInterval
     }
-
-    public var baseRestPath: String {
-        return config.network.baseRestPath
-    }
-
-    public var baseRestUrl: String {
-        return "http://\(config.network.host):\(config.network.port)/\(config.network.baseRestPath)"
-    }
-
-    public var webSocketPath: String {
-        return config.network.webSocketPath
-    }
-
-    public var webSocketUrl: String {
-        return "ws://\(config.network.host):\(config.network.port)/\(config.network.webSocketPath)"
+    
+    public var connectionTimeout: TimeInterval {
+        return config.network.connectionTimeout
     }
 
     // MARK: - Service variables

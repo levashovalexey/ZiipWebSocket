@@ -33,8 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         }
 
-        Logger.info("========================== ZIIPROOM ========================")
-        Logger.info("================ iOS App \(AppInfo.version) ================")
+        Logger.info("========================== SocketTestApp ========================")
 
         guard let configurationService = dependencyContainer.resolve(ConfigurationService.self) else {
             fatalError("ConfigurationService error!")

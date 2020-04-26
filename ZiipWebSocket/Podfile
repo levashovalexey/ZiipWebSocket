@@ -10,7 +10,8 @@ target 'ZiipWebSocket' do
     pod 'SwinjectStoryboard'
     pod 'SwiftyJSON'
     pod 'SwiftyBeaver'
-  
+    pod 'Alamofire', '~> 4.5'
+    pod 'AlamofireNetworkActivityLogger', '~> 2.0'
 
   target 'ZiipWebSocketTests' do
     inherit! :search_paths
